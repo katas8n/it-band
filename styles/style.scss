@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+@import "./mixin.scss";
+
+@font-face {
+    font-family: 'mon' ;
+    src: url('../public/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "mon";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+    font-size: $xl-font-size;
+}
+
+.header {
+}
+
+.nav {
+    padding: $xl-padding ;
+    background-color: pink;
+    &__items {
+        display: flex;
+        justify-content: space-around;
+
+    }
+    &__item {
+        list-style-type: none;
+    }
+
+}
+
+.course {
+    &__img {
+        width: 100%;
+        border-radius: 2rem;
+    }
+    padding: $xl-padding ;
+}
+
+.description {
+    @include forMainTags;
+    &__key , &__value {
+        border: 2px solid $primary-text-color;
+        width: 100%;
+        border-right:none ;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+
+.button {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    
+    &-wrapper {
+        @include forMainTags;
+        margin-top: $md-padding;
+    }
+}
